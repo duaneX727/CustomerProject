@@ -1,0 +1,6 @@
+C:\Users\Marlon\Source\Repos\CustomerProject-Lab4-\BusinessLogicCustomer\bin\Debug\BusinessLogicCustomer.dll
+C:\Users\Marlon\Source\Repos\CustomerProject-Lab4-\BusinessLogicCustomer\bin\Debug\BusinessLogicCustomer.pdb
+C:\Users\Marlon\Source\Repos\CustomerProject-Lab4-\BusinessLogicCustomer\obj\Debug\BusinessLogicCustomer.csproj.CoreCompileInputs.cache
+C:\Users\Marlon\Source\Repos\CustomerProject-Lab4-\BusinessLogicCustomer\obj\Debug\BusinessLogicCustomer.dll
+C:\Users\Marlon\Source\Repos\CustomerProject-Lab4-\BusinessLogicCustomer\obj\Debug\BusinessLogicCustomer.pdb
+C:\Users\Marlon\Source\Repos\CustomerProject-Lab4-\BusinessLogicCustomer\obj\Debug\BusinessLogicCustomer.csprojAssemblyReference.cache

@@ -1,0 +1,38 @@
+USE [CustomerDB]
+GO
+/****** Object:  Table [dbo].[mstProduct]    Script Date: 4/19/2020 1:06:51 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[mstProduct](
+	[ProductId] [int] NOT NULL,
+	[ProductName] [nvarchar](50) NULL,
+ CONSTRAINT [PK_mstProduct] PRIMARY KEY CLUSTERED 
+(
+	[ProductId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[tblCustomer]    Script Date: 4/19/2020 1:06:51 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[tblCustomer](
+	[CustomerId] [int] IDENTITY(1,1) NOT NULL,
+	[ProductId_fk] [int] NULL,
+	[CustomerName] [nvarchar](50) NULL,
+	[PhoneNumber] [nvarchar](50) NULL,
+	[BillAmount] [money] NULL,
+ CONSTRAINT [PK_tblCustomer] PRIMARY KEY CLUSTERED 
+(
+	[CustomerId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[tblCustomer]  WITH CHECK ADD  CONSTRAINT [FK_tblCustomer_mstProduct] FOREIGN KEY([ProductId_fk])
+REFERENCES [dbo].[mstProduct] ([ProductId])
+GO
+ALTER TABLE [dbo].[tblCustomer] CHECK CONSTRAINT [FK_tblCustomer_mstProduct]
+GO
